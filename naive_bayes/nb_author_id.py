@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """ 
     This is the code to accompany the Lesson 1 (Naive Bayes) mini-project. 
@@ -23,16 +23,16 @@ from sklearn.metrics import accuracy_score
 #########################################################
 ### your code goes here ###
 ### added some imports above for code readability ###
-if __name__ == '__main__':
-    main()
-
-def main():
+def run():
     features_train, features_test, labels_train, labels_test = preprocess()
     classifier = GaussianNB()
     classifier.fit(features_train, labels_train)
     pred = classifier.predict(features_test)
     print(accuracy_score(pred, labels_test))
 
+
+if __name__ == '__main__':
+    run()
 #########################################################
 
 
